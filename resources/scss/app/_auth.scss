@@ -1,0 +1,24 @@
+.wrapper_auth {
+    background-color: #0d5daa;
+    padding-top: 10%;
+    padding-bottom: 150px;
+    min-height: 100vh;
+    min-width: 100vw;
+
+    .img__logo--auth {
+        height: 60px;
+    }
+
+    .form-group-user {
+        border-radius: 5px;
+        border: thin solid $border;
+        padding: 0px 10px;
+        height: 40px;
+        background-color: $white;
+
+        .form-input {
+            border: none;
+            background-color: transparent;
+        }
+    }
+}

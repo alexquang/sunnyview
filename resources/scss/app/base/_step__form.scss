@@ -1,0 +1,111 @@
+/* CSS */
+.steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // margin-bottom: 2rem;
+    position: relative;
+    // width: 80%;
+    margin: 0px auto 2rem;
+
+    .no-select {
+        pointer-events: none;
+    }
+}
+
+.step-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid $border;
+    background-color: $white;
+    transition: .4s;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.step-title {
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.step-title.done,
+.step-title[aria-expanded="true"] {
+    color: $blue;
+}
+
+.step-button.done,
+.step-button[aria-expanded="true"] {
+    background-color: $blue;
+    color: #fff;
+    border: 2px solid $blue;
+}
+
+.step-button.done {
+    background-color: $blue;
+    color: #fff;
+}
+
+.step-item {
+    z-index: 10;
+    text-align: center;
+    min-width: 180px;
+}
+
+#progress-rds {
+    -webkit-appearance: none;
+    position: absolute;
+    width: 88%;
+    z-index: 5;
+    height: 4px;
+    margin-left: 6%;
+    margin-bottom: 27px;
+
+    @media screen and (max-width: 1500px) {
+        width: 84%;
+        margin-left: 8%;
+    }
+
+    @media screen and (max-width: 1500px) {
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+
+/* to customize progress bar */
+#progress-rds::-webkit-progress-value {
+    background-color: $blue;
+    transition: .5s ease;
+}
+
+#progress-rds::-webkit-progress-bar {
+    background-color: $border;
+
+}
+
+#progress-ec2 {
+    -webkit-appearance: none;
+    position: absolute;
+    width: 88%;
+    z-index: 5;
+    height: 4px;
+    margin-left: 6%;
+    margin-bottom: 27px;
+
+    @media screen and (max-width: 1500px) {
+        width: 84%;
+        margin-left: 8%;
+    }
+}
+
+
+/* to customize progress bar */
+#progress-ec2::-webkit-progress-value {
+    background-color: $blue;
+    transition: .5s ease;
+}
+
+#progress-ec2::-webkit-progress-bar {
+    background-color: $border;
+
+}

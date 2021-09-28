@@ -1,0 +1,26 @@
+#!/usr/bin/env node
+// replace all UTC dates to local dates in pipe
+// usage: docker logs -t container_name | docker-logs-localtime
+
+process.stdin.resume();
+process.stdin.setEncoding('utf8');
+process.stdin.on('data', function(data) {
+    const match = data.match(/\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d+Z/g);
+    if (match) {
+        match.forEach(dateUtc => {
+            var dateLocal = new Date(dateUtc);
+            dateLocal = dateLocal.toLocaleString('ja-JP', {
+                timeZoneName: 'short',
+                timeZone: 'Asia/Tokyo',
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit',
+                hour: '2-digit',
+                minute:'2-digit',
+                second:'2-digit',
+            });
+            data = data.replace(dateUtc, dateLocal);
+        });
+    }
+    process.stdout.write(data);
+});

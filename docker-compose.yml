@@ -1,0 +1,122 @@
+version: "3.3"
+services:
+    php:
+        build:
+            context: ./setup/php
+            dockerfile: Dockerfile
+            args:
+                DOCKER_USER: ${DOCKER_USER:-www-dev}
+                DOCKER_GROUP: ${DOCKER_GROUP:-www-dev}
+                DOCKER_USER_ID: ${DOCKER_USER_ID:-1000}
+                DOCKER_GROUP_ID: ${DOCKER_GROUP_ID:-1000}
+
+                XDEBUG_START_WITH_REQUEST: ${XDEBUG_START_WITH_REQUEST:-default}
+                XDEBUG_DISCOVER_CLIENT_HOST: ${XDEBUG_DISCOVER_CLIENT_HOST:-false}
+                XDEBUG_MODE: ${XDEBUG_MODE:-off}
+                XDEBUG_CLIENT_PORT: ${XDEBUG_CLIENT_PORT:-9003}
+                XDEBUG_CLIENT_HOST: ${XDEBUG_CLIENT_HOST:-host.docker.internal}
+                XDEBUG_IDEKEY: ${XDEBUG_IDEKEY:-VSCODE}
+
+        container_name: sv-php
+        depends_on:
+            - pgsql
+        environment:
+            TZ: ${DOCKER_TIMEZONE}
+        networks:
+            - docker
+        ports:
+            - "${WEBSOCKETS_PORT:-9001}:9001"
+            - "${HRM_PORT:-9099}:${HRM_PORT:-9099}"
+        restart: ${DOCKER_RESTART_POLICY}
+        volumes:
+            - .:/var/www/html
+            - "phpsocket:/run/supervisor"
+        links:
+            - pgsql
+    nginx:
+        build:
+            context: ./setup/nginx
+            dockerfile: Dockerfile
+            args:
+                SCHEME: ${APP_SCHEME}
+                DOCKER_USER: ${DOCKER_USER:-www-dev}
+                DOCKER_GROUP: ${DOCKER_GROUP:-www-dev}
+                DOCKER_USER_ID: ${DOCKER_USER_ID:-1000}
+                DOCKER_GROUP_ID: ${DOCKER_GROUP_ID:-1000}
+        container_name: sv-nginx
+        depends_on:
+            - php
+        environment:
+            TZ: ${DOCKER_TIMEZONE}
+        networks:
+            - docker
+        ports:
+            - "${APP_PORT:-9090}:9090"
+        restart: ${DOCKER_RESTART_POLICY}
+        volumes:
+            - .:/var/www/html
+            - "phpsocket:/phpsocket"
+    pgsql:
+        build:
+            context: ./setup/postgres
+            dockerfile: Dockerfile
+        container_name: sv-pgsql
+        environment:
+            TZ: ${DOCKER_TIMEZONE}
+            PGPASSWORD: "${DB_PASSWORD}"
+            POSTGRES_DB: "${DB_DATABASE}"
+            POSTGRES_USER: "${DB_USERNAME}"
+            POSTGRES_PASSWORD: "${DB_PASSWORD}"
+            PGDATA: /var/lib/postgresql/data/sv-data
+        networks:
+            - docker
+        ports:
+            - "${DB_PORT:-5432}:5432"
+        restart: ${DOCKER_RESTART_POLICY}
+        volumes:
+            - $HOME/sv-data:/var/lib/postgresql/data/sv-data
+            - ./storage:/var/www/html/storage:rw
+    redis:
+        build:
+            context: ./setup/redis
+            dockerfile: Dockerfile
+        container_name: sv-redis
+        environment:
+            TZ: ${DOCKER_TIMEZONE}
+        networks:
+            - docker
+        ports:
+            - "${REDIS_PORT:-6379}:6379"
+        restart: ${DOCKER_RESTART_POLICY}
+    adminer:
+        image: adminer:latest
+        container_name: sv-adminer
+        environment:
+            ADMINER_DESIGN: ng9
+            ADMINER_DEFAULT_SERVER: pgsql
+            ADMINER_PLUGINS: tables-filter
+        links:
+            - pgsql
+        networks:
+            - docker
+        ports:
+            - "${ADMINER_PORT}:8080"
+        restart: ${DOCKER_RESTART_POLICY}
+    # pgadmin4:
+    #     image: dpage/pgadmin4:latest
+    #     container_name: sv-pgadmin4
+    #     environment:
+    #         PGADMIN_DEFAULT_EMAIL: admin@vn.ids.jp
+    #         PGADMIN_DEFAULT_PASSWORD: password
+    #     links:
+    #         - pgsql
+    #     networks:
+    #         - docker
+    #     ports:
+    #         - "${PGADMIN_PORT}:80"
+    #     restart: ${DOCKER_RESTART_POLICY}
+volumes:
+    phpsocket:
+networks:
+    docker:
+        driver: bridge

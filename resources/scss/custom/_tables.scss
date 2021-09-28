@@ -1,0 +1,79 @@
+.dataTable-pagination-list {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    li {
+        width: 42px;
+        font-size: 0.85rem;
+        text-align: center;
+        > a {
+            padding: 0.3rem 0;
+            position: relative;
+            display: block;
+            color: #1f2937;
+            background-color: #fff;
+            border: 0.0625rem solid #9ca3af;
+            transition: none !important;
+            // transition: color 0.15s ease-in-out,
+            //     background-color 0.15s ease-in-out,
+            //     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+            &:hover {
+                z-index: 2;
+                color: #000;
+                background-color: #e5e7eb;
+                // border-color: #d1d5db;
+            }
+
+            &:focus {
+                z-index: 3;
+                color: #000;
+                background-color: #e5e7eb;
+                outline: 0;
+                box-shadow: 0 0 0 0.18rem rgba(31, 41, 55, 0.25);
+            }
+        }
+        &:not(:first-child) a {
+            margin-left: -0.0625rem;
+        }
+        &.active a {
+            z-index: 3;
+            color: #fff;
+            background-color: #1f2937;
+            border-color: #1f2937;
+            // pointer-events: none;
+        }
+        &.disabled a {
+            color: #43464b;
+            pointer-events: none;
+            background-color: #fff;
+            border-color: #d1d5db;
+        }
+    }
+}
+.dataTable-bottom > .dataTable-info {
+    height: 32px;
+    line-height: 32px;
+}
+// @media (prefers-reduced-motion: reduce) {
+//     .dataTable-pagination-list li > a {
+//         transition: none;
+//     }
+// }
+// .dataTable-dropdown,
+// .dataTable-info {
+//     position: sticky;
+//     left: 1.5rem;
+// }
+// .dataTable-search,
+// .dataTable-pagination {
+//     position: sticky;
+//     right: 1.5rem;
+// }
+// .card {
+//     .dataTable-top {
+//         padding: 0 1rem 1rem 1rem;
+//     }
+//     .dataTable-bottom {
+//         padding: 1.5rem 1rem 0 1rem;
+//     }
+// }

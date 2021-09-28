@@ -1,0 +1,185 @@
+.paginate_input,
+input[aria-controls^="datatable"],
+select[aria-controls^="datatable"] {
+    width: 75px;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out 0.15s,
+        -webkit-box-shadow ease-in-out 0.15s;
+    -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s, box-sadow ease-in-out 0.15s;
+}
+
+[aria-controls^="datatable"][type="search"] {
+    width: 200px;
+}
+.dataTable {
+    width: 100% !important;
+}
+.dataTable.no-footer {
+    border-bottom: 1px solid hsl(210, 14%, 89%);
+}
+/* table td {
+    // commented out due to animation issues in /invoices page
+    vertical-align: middle;
+} */
+.dataTables_paginate .paginate_button {
+    border: none !important;
+}
+.dataTables_paginate .paginate_button:not(.disabled):hover,
+.dataTables_paginate .paginate_button:not(.disabled):active {
+    color: #0056b3 !important;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    box-shadow: none;
+}
+.dataTables_paginate .paginate_button.disabled,
+.dataTables_paginate .paginate_button.disabled:hover,
+.dataTables_paginate .paginate_button.disabled:active {
+    color: #999 !important;
+}
+.dataTables_length,
+.dataTables_filter {
+    margin-bottom: 10px;
+}
+.sorting_asc,
+.sorting_desc {
+    background-position: right;
+    background-color: #1d3649e0 !important;
+    border-bottom: 1px solid #1d3649e0 !important;
+}
+.dataTable tfoot th,
+.dataTable tfoot td {
+    padding: 10px 18px 6px 18px;
+    border: 1px solid rgb(219, 219, 219);
+    border-top: none;
+    padding: 0.7em 0.5em !important;
+}
+th.w-20,
+th.index {
+    min-width: 20px !important;
+    max-width: 20px !important;
+    width: 20px !important;
+}
+th.w-30 {
+    min-width: 30px !important;
+    max-width: 30px !important;
+    width: 30px !important;
+}
+th.w-40 {
+    min-width: 40px !important;
+    max-width: 40px !important;
+    width: 40px !important;
+}
+th.w-50,
+th.action-1 {
+    min-width: 50px !important;
+    max-width: 50px !important;
+    width: 50px !important;
+}
+th.w-60 {
+    min-width: 60px !important;
+    max-width: 60px !important;
+    width: 60px !important;
+}
+th.w-70 {
+    min-width: 70px !important;
+    max-width: 70px !important;
+    width: 70px !important;
+}
+th.w-80 {
+    min-width: 80px !important;
+    max-width: 80px !important;
+    width: 80px !important;
+}
+th.w-90 {
+    min-width: 90px !important;
+    max-width: 90px !important;
+    width: 90px !important;
+}
+th.w-100,
+th.action-2 {
+    min-width: 100px !important;
+    max-width: 100px !important;
+    width: 100px !important;
+}
+th.w-110 {
+    min-width: 110px !important;
+    max-width: 110px !important;
+    width: 110px !important;
+}
+th.w-120 {
+    min-width: 120px !important;
+    max-width: 120px !important;
+    width: 120px !important;
+}
+th.w-130 {
+    min-width: 130px !important;
+    max-width: 130px !important;
+    width: 130px !important;
+}
+th.w-140 {
+    min-width: 140px !important;
+    max-width: 140px !important;
+    width: 140px !important;
+}
+th.w-150,
+th.action-3 {
+    min-width: 150px !important;
+    max-width: 150px !important;
+    width: 150px !important;
+}
+/* custom color for .table-bordered */
+.dataTable.table-bordered th {
+    border-bottom-color: #1d3649;
+    border-top-color: #1d3649;
+}
+.dataTable.table-bordered th:first-child {
+    border-left-color: #1d3649;
+}
+.dataTable.table-bordered th:last-child {
+    border-right-color: #1d3649;
+}
+/* re-position some elements */
+.dataTables_wrapper {
+    position: initial;
+}
+.dataTables_length {
+    position: absolute;
+}
+.dataTables_filter {
+    position: absolute;
+    right: 15px;
+}
+.dataTables_paginate {
+    position: absolute;
+    right: 15px;
+}
+.dataTable {
+    padding-top: 45px;
+}
+/* this is to separte dataTables_wrapper and table horizontal scrollbar */
+.dataTables_wrapper {
+    margin-bottom: 15px;
+}
+.dataTable thead th,
+.dataTable tfoot th {
+    word-break: keep-all;
+    white-space: nowrap;
+}
+@media screen and (max-width: 640px) {
+    /* fix default dataTables_filter position */
+    .dataTables_wrapper .dataTables_filter {
+        margin-top: 0 !important;
+    }
+}

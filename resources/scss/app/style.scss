@@ -1,0 +1,48 @@
+// Fonts
+// @import url("https://fonts.googleapis.com/css?family=Nunito");
+
+@import "../custom/fonts";
+
+// Variables
+@import "variables";
+
+// Custom
+@import "base/common";
+
+// Layout
+@import "layout";
+
+// Auth
+@import "_auth";
+
+// Form
+@import "base/_form";
+
+// Button
+@import "base/_button";
+
+// Table
+@import "base/_table";
+
+// styles
+@import "base/_styles";
+
+// pagination
+@import "base/_pagination";
+
+// StepForm
+@import "base/_step__form";
+
+// Bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+// Icons
+// @import "~simple-line-icons/css/simple-line-icons.css";
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+
+// toastr
+// @import '~toastr/toastr';
+
+body {
+    font-size: 14px;
+}

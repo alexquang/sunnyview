@@ -1,0 +1,269 @@
+.btns {
+    font-size: $normal-content-size;
+    font-weight: 600 !important;
+    cursor: pointer;
+    outline: none !important;
+    padding: 0px 20px;
+    height: 40px;
+    border-radius: 5px;
+
+    &.disabled,
+    &:disabled {
+        opacity: 0.5;
+        cursor: default;
+        pointer-events: none;
+    }
+
+    &.sm {
+        height: 30px;
+    }
+
+    &.shadow {
+        box-shadow: 0px 0px 7px #0000004d;
+    }
+
+    &.btn-default {
+        background: $orange;
+        border: thin solid $orange;
+        color: $white;
+
+        &:hover {
+            box-shadow: 0 0 0 100px rgb(0 0 0 / 5%) inset !important;
+        }
+    }
+
+    &.btn-blue {
+        background: $blue-light;
+        border: thin solid $blue-light;
+        color: $white;
+
+        &:hover {
+            box-shadow: 0 0 0 100px rgb(0 0 0 / 5%) inset !important;
+        }
+    }
+
+    &.btn-green {
+        background: $green;
+        border: thin solid $green;
+        color: $white;
+
+        &:hover {
+            box-shadow: 0 0 0 100px rgb(0 0 0 / 5%) inset !important;
+        }
+    }
+
+    &.btn-green-outline {
+        background: $white;
+        border: thin solid $green;
+        color: $green;
+        height: 40px;
+        padding: 0px 20px;
+
+        &.lg {
+            height: 60px;
+        }
+
+        &.active,
+        &:hover {
+            background: $green;
+            border: thin solid $green;
+            color: $white;
+        }
+    }
+
+    &.btn-red {
+        background: $red;
+        border: thin solid $red;
+        color: $white;
+
+        &:hover {
+            box-shadow: 0 0 0 100px rgb(0 0 0 / 5%) inset !important;
+        }
+    }
+
+    &.btn-cancel {
+        background: $white;
+        border: thin solid $black;
+        color: $black;
+
+        &:hover {
+            box-shadow: 0 0 0 100px rgb(0 0 0 / 5%) inset !important;
+        }
+    }
+
+    &.btn-tabs {
+        color: $white;
+        background: none;
+        border: none;
+
+        &:hover {
+            background: $white;
+            color: $blue-light;
+            box-shadow: 0 0 0 100px rgb(0 0 0 / 5%) inset !important;
+        }
+
+        &.active {
+            background: $white;
+            color: $blue-light;
+            border: thin solid $white;
+        }
+    }
+
+    a.btn-links,
+    &.btn-links {
+        color: black;
+        border: none;
+        padding: 0px;
+        text-decoration: underline !important;
+        background-color: transparent;
+
+        &:hover {
+            text-decoration: none !important;
+        }
+
+        &.default {
+            color: $orange !important;
+        }
+    }
+
+    &.btn-default-outline {
+        background: $white;
+        border: thin solid $orange;
+        color: $orange;
+        height: 40px;
+        padding: 0px 20px;
+
+        &.lg {
+            height: 60px;
+        }
+
+        &.active,
+        &:hover {
+            background: $orange;
+            border: thin solid $orange;
+            color: $white;
+        }
+    }
+
+    &.btn-delete-outline {
+        background: $white;
+        border: thin solid $red;
+        color: $red;
+        height: 40px;
+        padding: 0px 20px;
+
+        &.lg {
+            height: 60px;
+        }
+
+        &.active,
+        &:hover {
+            background: $red;
+            border: thin solid $red;
+            color: $white;
+        }
+    }
+
+    &.btn-outline {
+        background: $white;
+        border: thin solid $blue;
+        color: $blue;
+        height: 40px;
+        padding: 0px 20px;
+
+        &:hover {
+            background: $blue;
+            border: thin solid $blue;
+            color: $white;
+        }
+    }
+
+    &.btn-outline-cancel {
+        background: #ddd;
+        border: thin solid $black;
+        color: #000;
+        height: 40px;
+        padding: 0px 20px;
+
+        &:hover {
+            background-color: $gray;
+        }
+    }
+
+    &.btn-edit {
+        background: $blue-light;
+        border: thin solid $blue-light;
+        color: $white;
+
+        &:hover {
+            background: $blue;
+            border: thin solid $blue;
+        }
+    }
+
+    &.btn-delete {
+        background: $error;
+        border: thin solid $error;
+        color: $white;
+
+        &:hover {
+            background: $red;
+            border: thin solid $red;
+        }
+    }
+
+    &.dt-btn-add,
+    &.dt-btn-default,
+    &.dt-btn-edit,
+    &.dt-btn-delete,
+    &.dt-btn-assign {
+        background: none;
+        border: none;
+        font-size: 24px;
+        padding: 0px;
+        height: unset;
+    }
+
+    &.dt-btn-default {
+        color: $orange;
+
+        &:hover {
+            color: $orange-dark;
+        }
+    }
+
+    &.dt-btn-edit {
+        color: $blue-light;
+
+        &:hover {
+            color: $blue;
+            background-color: white;
+            border: none;
+        }
+    }
+
+    &.dt-btn-delete {
+        color: $error;
+
+        &:hover {
+            color: $red;
+        }
+    }
+
+    &.dt-btn-assign {
+        color: #71b711;
+
+        &:hover {
+            color: $white;
+            background-color: #71b711;
+        }
+    }
+
+    &.dt-btn-add {
+        color: $green-light;
+
+        &:hover {
+            color: $green;
+        }
+    }
+}

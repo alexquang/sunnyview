@@ -1,0 +1,192 @@
+.dataTables_wrapper {
+    margin-bottom: 55px !important;
+
+    .label_filter {
+        position: relative;
+    }
+
+    .form-group-search {
+        position: absolute;
+        z-index: 9;
+    }
+
+    .dataTables_paginate {
+        a.paginate_button {
+            border-radius: 30px !important;
+            color: $white !important;
+            font-weight: 600;
+
+            &.current {
+                background: $orange !important;
+                border: none;
+                color: $white !important;
+            }
+        }
+
+        a.paginate_button:hover {
+            background: $white !important;
+            /*change the hover background color*/
+            color: $orange !important;
+            /*change the hover text color*/
+        }
+    }
+
+    .dataTables_info {
+        color: $white !important;
+    }
+
+    .datatable-search-icon {
+        background: #333;
+        width: 40px;
+        height: 36px;
+        border-radius: 0px 5px 5px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $white;
+    }
+
+    .dataTables_filter {
+        right: 540px;
+
+        input {
+            font-size: 12px;
+            margin-top: 5px;
+        }
+    }
+}
+
+.groupHeaderDatatable,
+.dataTables_length {
+    right: 430px;
+    margin-top: 5px;
+}
+
+.groupHeaderDatatable .dataTables_paginate {
+    width: 410px;
+    right: 15px;
+    padding-top: 0px;
+}
+
+.datatable-search-icon {
+    top: 58%;
+    left: 200px;
+    transform: translateY(-50%);
+    position: absolute;
+    z-index: 1;
+    width: 25px;
+    color: #777;
+}
+
+// Overwrite width default css of input search datatable
+[aria-controls^="datatable"][type="search"] {
+    width: 230px !important;
+}
+
+// Overwrite width default css of input length datatable
+[id^="datatable"] .paginate_input,
+input[aria-controls^="datatable"],
+select[aria-controls^="datatable"] {
+    width: 100px !important;
+}
+
+.table-responsive {
+    // overflow-x: hidden;
+    &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        background-color: #f5f5f5;
+    }
+
+    &::-webkit-scrollbar {
+        height: 4px;
+        background-color: #f5f5f5;
+        cursor: pointer;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #dddddd;
+        border: 2px solid #555555;
+    }
+
+    thead {
+        tr {
+            background-color: #eeeeee;
+            border-left: 1px solid #eeeeee;
+            border-right: 1px solid #eeeeee;
+
+            th:not(:last-child) {
+                border-right: 1px solid $white;
+                border-bottom: 1px solid #dddddd;
+            }
+
+            th {
+                padding: 20px;
+                border-bottom: 1px solid $border;
+            }
+        }
+
+        .sorting_asc,
+        .sorting_disabled,
+        .sorting_desc {
+            background-position: right;
+            background-color: #eeeeee !important;
+            border-bottom: 1px solid #dddddd !important;
+        }
+    }
+
+    tbody {
+        tr {
+            border-left: 1px solid $border;
+            border-right: 1px solid $border;
+        }
+    }
+
+    tr {
+        td {
+            padding: 5px;
+        }
+
+        td._20 {
+            padding: 20px;
+        }
+
+        border-bottom: 1px solid $border;
+    }
+
+    table.dataTable {
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+
+    table.dataTable.no-footer {
+        border-bottom: none;
+    }
+
+    table.dataTable thead th,
+    table.dataTable thead td {
+        border-bottom: 1px solid $border;
+    }
+
+    .dataTables_processing,
+    .dataTables_wrapper .dataTables_paginate {
+        color: #ffffff;
+    }
+
+    table.dataTable.display tbody tr.odd > .sorting_1,
+    table.dataTable.order-column.stripe tbody tr.odd > .sorting_1,
+    table.dataTable.display tbody tr.odd > .sorting_1:hover,
+    table.dataTable.order-column.stripe tbody tr.odd > .sorting_1:hover,
+    table.display tbody tr:nth-child(odd):hover td {
+        background-color: #f9f9f9 !important;
+    }
+
+    table.dataTable.display tbody tr.even > .sorting_1,
+    table.dataTable.order-column.stripe tbody tr.even > .sorting_1,
+    table.dataTable.display tbody tr.even > .sorting_1:hover,
+    table.dataTable.order-column.stripe tbody tr.even > .sorting_1:hover,
+    table.display tbody tr:nth-child(even):hover td {
+        background-color: #ffffff !important;
+    }
+}
+@import "datatables.min";
+@import "datatables.custom";

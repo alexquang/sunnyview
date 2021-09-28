@@ -1,0 +1,916 @@
+/*==================== Dashboard ダッシュボード ====================*/
+#dashboard {
+    .list-expense {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 20px;
+
+        a {
+            text-decoration: none;
+        }
+
+        .item-expense {
+            height: 70px;
+            background: $blue-light;
+            box-shadow: 0px 5px 1px #00000029;
+            border-radius: 10px;
+
+            &:hover {
+                background: $orange;
+            }
+        }
+    }
+
+    ul.list-appro-value {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        border: thin solid $border;
+
+        li {
+            list-style-type: none;
+
+            &:not(:last-child) {
+                border-right: 2px solid $border;
+            }
+        }
+    }
+
+    .service {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+
+        .item-service {
+            .item-group-service {
+                border-top: thin solid $border;
+                border-right: thin solid $border;
+                border-left: thin solid $border;
+                display: grid;
+                grid-template-columns: 1fr 80px;
+
+                &:last-child {
+                    border-bottom: thin solid $border;
+                }
+
+                .item-service-left {
+                    background-color: $white;
+                    border-right: thin solid $border;
+                }
+            }
+        }
+    }
+    @media screen and(max-width: 1800px){
+        .form-group {
+            display: block;
+        }
+    }
+    @media screen and(max-width: 1319px){
+        .form-group {
+            flex: 0 0 34%;
+        }
+    }
+}
+
+/*==================== END Dashboard ダッシュボード ====================*/
+
+/*==================== RDSインスタンス一覧 ====================*/
+
+.rds {
+    .cards {
+        border-radius: 8px;
+    }
+
+    .bd-blue {
+        border: 1px solid $blue;
+
+        .cards-body {
+            border-bottom: 1px solid $blue;
+        }
+    }
+
+    .bd-red {
+        border: 1px solid $error;
+
+        .cards-body {
+            border-bottom: 1px solid $error;
+        }
+    }
+
+    .bd-teal {
+        border: 1px solid $teal;
+
+        .cards-body {
+            border-bottom: 1px solid $teal;
+        }
+    }
+}
+
+.exampleModalRDS {
+    .list-info-version {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        .item-info-version {
+            .title-version {
+                background: $border;
+                border-top: 1px solid $white;
+                border-bottom: 1px solid $white;
+            }
+
+            .info-version {
+                border: 1px solid $border;
+            }
+        }
+    }
+}
+
+/*==================== END RDSインスタンス一覧 ====================*/
+
+/*==================== インスタンス申請ーRDSインスタンス ====================*/
+
+#rds-version {
+    #frmRdsInstanceStep1 {
+        .row-left {
+            display: flex;
+            align-items: center;
+
+            .form-group {
+                align-items: center;
+
+                .form-label {
+                    min-width: 180px;
+                    font-size: 14px;
+                    margin-top: 0px;
+                }
+            }
+        }
+
+        .row-right {
+            display: flex;
+            align-items: center;
+
+            .form-group {
+                align-items: center;
+
+                .form-label {
+                    min-width: 170px;
+                    font-size: 14px;
+                    margin-top: 0px;
+                }
+
+                .form-date {
+                    .input_from_date {
+                        width: calc(100% - 40px);
+                    }
+
+                    .calendar-icon {
+                        // margin-top: 0px;
+                    }
+                }
+            }
+        }
+
+
+        .form-info {
+            width: 100%;
+        }
+
+
+
+
+        @media screen and (max-width: 1400px) {
+            .group-title {
+                .label-bage {
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+
+    #frmRdsInstanceStep2 {
+        .row-left {
+            display: flex;
+            align-items: center;
+
+            .form-group {
+                align-items: center;
+
+                .form-label {
+                    min-width: 240px;
+                    font-size: 14px;
+                    margin-top: 0px;
+                }
+            }
+        }
+
+        .row-right {
+            display: flex;
+            align-items: center;
+
+            .form-group {
+                align-items: center;
+
+                .form-label {
+                    min-width: 170px;
+                    font-size: 14px;
+                    margin-top: 0px;
+                }
+            }
+
+            @media screen and (max-width: 1450px) {
+                .form-group {
+                    .form-label {
+                        min-width: 150px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+
+            @media screen and (max-width: 1399px) {
+                .form-group {
+                    .form-label {
+                        min-width: 240px;
+                    }
+                }
+
+                .input-group {
+                    display: block;
+                }
+            }
+        }
+
+
+        .form-info {
+            width: 100%;
+        }
+
+    }
+
+    ul.list-appro-value {
+        display: flex;
+        border: thin solid $border;
+        align-items: center;
+        flex-wrap: wrap;
+
+        li {
+            border-right: 2px solid $black;
+            list-style-type: none;
+            width: 33.33%;
+
+            &:last-child {
+                border-right: none;
+            }
+
+            @media screen and (max-width: 1700px) {
+                &:not(:first-child) {
+                    border-right: none;
+                }
+
+                flex: 1 0 213px;
+
+                &:last-child {
+                    margin-top: 10px;
+                }
+
+            }
+        }
+    }
+
+
+}
+
+/*==================== END インスタンス申請ーRDSインスタンス ====================*/
+
+/*==================== インスタンス申請ーEC2インスタンス ====================*/
+
+#ec2-instance-registration-form {
+    .form-group.ec2 {
+
+        input.ec2,
+        select.ec2 {
+            border: none;
+            height: 40px;
+            padding: 0px 5px;
+        }
+
+        select.ec2 {
+            border-radius: 5px 0px 0px 5px;
+        }
+
+        input.ec2 {
+            border-left: 1px solid $border;
+            border-radius: 0px 5px 5px 0px;
+        }
+
+        border: 1px solid $border;
+        border-radius: 5px;
+    }
+
+    #frmEc2InstanceSpecs {
+        .row-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .form-group {
+            align-items: center;
+
+            .form-label {
+                min-width: 190px;
+                font-size: 14px;
+                margin-top: 0px;
+            }
+        }
+
+        .form-info {
+            width: 100%;
+        }
+
+        .form-date {
+            .input_from_date {
+                width: calc(100% - 40px);
+            }
+
+            .calendar-icon {
+                margin-top: 0px;
+            }
+        }
+
+        .row-right {
+            display: flex;
+            align-items: center;
+        }
+
+        @media screen and (max-width: 1440px) {
+
+            .row-left,
+            .row-right,
+            .form-group {
+                display: block;
+            }
+
+            .form-group {
+                .form-label {
+                    min-width: auto;
+                    margin-right: 10px;
+                }
+            }
+
+            .group-title {
+                .form-label {
+                    margin-top: 0px;
+                }
+
+                .label-bage {
+                    display: inline-flex;
+                }
+
+                margin-bottom: 5px;
+            }
+
+            .form-date {
+                .input_from_date {
+                    width: calc(100% - 44px);
+                    margin-top: 0px;
+                }
+            }
+        }
+    }
+
+    .table-ec2 {
+        border: 1px solid $border;
+
+        .heads .tr,
+        .bodys .tr {
+            display: grid;
+            grid-template-columns: 40px 280px 1fr;
+            height: 60px;
+        }
+
+        .heads .tr {
+            border-bottom: thin solid $border;
+            background-color: #EEEEEE;
+
+            .th:not(:last-child) {
+                border-right: 1px solid $white;
+            }
+        }
+
+        .tr {
+            &:not(:last-child) {
+                border-bottom: thin solid $border;
+            }
+
+        }
+
+        tr {
+            &:not(:last-child) {
+                border-bottom: thin solid $border;
+            }
+
+            th {
+                padding: 5px;
+
+                &:not(:last-child) {
+                    border-right: 1px solid $white;
+                }
+            }
+
+            &.bg-head {
+                border-bottom: thin solid $border;
+                background-color: #EEEEEE;
+            }
+        }
+    }
+
+}
+
+/*==================== END インスタンス申請ーEC2インスタンス ====================*/
+
+/*==================== AWSアカウント設定 ====================*/
+
+#aws-account-setting {
+    .span-number {
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+        border-radius: 30px;
+        background-color: $blue;
+        color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    .img-content-aws {
+        width: 40%;
+    }
+}
+
+/*==================== END AWSアカウント設定 ====================*/
+
+/*==================== Event-Log ====================*/
+
+#event-log {
+    .select2-container {
+        width: 100%;
+    }
+
+    @media screen and (max-width: 1500px) {
+        .form-group {
+            display: block;
+        }
+    }
+}
+
+/*==================== END Event-Log ====================*/
+
+/*==================== User-Setting ====================*/
+
+#user-setting {
+    .groups-1 {
+        display: flex;
+        align-items: flex-start;
+
+        .group-title {
+            margin-top: 8px;
+        }
+
+        .form-group {
+            .form-input {
+                width: 200px;
+            }
+
+            .form-label {
+                font-size: 14px;
+                margin-top: 0px;
+            }
+
+        }
+
+        .title-input {
+            margin-left: 10px;
+            min-width: 210px;
+            margin-top: 10px;
+            font-size: 12px;
+        }
+
+        .label_120 {
+            min-width: 120px;
+        }
+
+        .d-flex-reponsive {
+            display: flex;
+        }
+
+        @media screen and (max-width: 1700px) {
+            .form-group {
+                .form-input {
+                    width: 150px;
+                }
+            }
+        }
+
+        @media screen and (max-width: 1700px) {
+            .form-group {
+                .form-input {
+                    width: 150px;
+                }
+            }
+        }
+
+
+        @media screen and (max-width: 1600px) {
+            display: block;
+
+            .form-group {
+                .form-input {
+                    width: 100%;
+                }
+
+                margin-top: 0px;
+
+            }
+
+            .label_120 {
+                min-width: auto;
+            }
+
+            .d-flex-reponsive {
+                display: block;
+            }
+        }
+    }
+
+    .groups-1-check {
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: 1250px) and (min-width: 1200px) {
+            // .groups-1-check {
+            display: block;
+            // }
+        }
+    }
+
+
+    .groups-2 {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+
+        .form-group {
+            .form-input {
+                width: 80px;
+            }
+        }
+
+        .group-title {
+            margin-top: 8px;
+        }
+
+        .form-label {
+            font-size: 14px;
+            margin-top: 0px;
+        }
+
+        .title-input {
+            margin-left: 10px;
+            min-width: 275px;
+            margin-top: 10px;
+            font-size: 12px;
+        }
+
+        .label_300 {
+            min-width: 295px;
+            font-size: 14px;
+        }
+
+        .d-flex-reponsive {
+            display: flex;
+        }
+
+        @media screen and (max-width: 1875px) {
+            flex-wrap: wrap;
+
+            .form-group {
+                .form-input {
+                    min-width: 100px;
+                    width: 100%;
+                }
+            }
+
+            .group-title {
+                margin-top: 0px;
+            }
+
+            .label_300 {
+                min-width: auto;
+            }
+
+            .d-flex-reponsive {
+                width: 100%;
+            }
+
+            &.groups-2-select {
+                display: block;
+            }
+        }
+    }
+
+    .groups-2-check {
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: 1480px) and (min-width: 1200px) {
+            display: block;
+        }
+    }
+
+    .groups-3-action {
+        @media screen and (max-width: 1700px) {
+            width: 100%;
+        }
+    }
+
+    .groups-3 {
+        display: flex;
+        align-items: flex-start;
+
+        .label_130 {
+            min-width: 130px;
+            font-size: 14px;
+        }
+
+        .group-title {
+            margin-top: 8px;
+        }
+
+    }
+
+    .groups-4 {
+        display: flex;
+        align-items: flex-start;
+
+        .group-title {
+            margin-top: 8px;
+        }
+
+        .form-group {
+            .form-input {
+                width: 200px;
+            }
+
+            .form-label {
+                font-size: 14px;
+                margin-top: 0px;
+            }
+
+        }
+
+        .title-input {
+            margin-left: 10px;
+            min-width: 210px;
+            margin-top: 10px;
+            font-size: 12px;
+        }
+
+        .label_120 {
+            min-width: 120px;
+        }
+
+        .d-flex-reponsive {
+            display: flex;
+        }
+
+        @media screen and (max-width: 1700px) {
+            .form-group {
+                .form-input {
+                    width: 150px;
+                }
+            }
+        }
+
+        @media screen and (max-width: 1700px) {
+            .form-group {
+                .form-input {
+                    width: 150px;
+                }
+            }
+        }
+
+
+        @media screen and (max-width: 1600px) {
+            display: block;
+
+            .form-group {
+                .form-input {
+                    width: 100%;
+                }
+
+                margin-top: 0px;
+
+            }
+
+            .label_120 {
+                min-width: auto;
+            }
+
+            .d-flex-reponsive {
+                display: block;
+            }
+        }
+    }
+}
+
+/*==================== User-Uetting ====================*/
+
+/*==================== Plans ====================*/
+
+#plans {
+    .container-plans {
+        display: grid;
+        grid-template-columns: 250px 1fr 1fr;
+        grid-gap: 20px;
+
+        .plan-items {
+            .container-item {
+                padding: 5px;
+            }
+
+            &.active {
+
+                .container-item {
+                    border-radius: 8px;
+                    background-color: $blue-light;
+
+                }
+
+                .title-plan {
+                    color: $white;
+                }
+
+                .list-functions {
+                    border-radius: 0px 0px 8px 8px;
+                    border: 1px solid $white;
+                }
+            }
+
+            .title-plan {
+                text-align: center;
+                height: 50px;
+                font-size: 16px;
+            }
+
+            .list-functions {
+                background-color: $white;
+                border-radius: 8px;
+                border: 1px solid $border;
+
+                .img__sunny-pay {
+                    width: 170px;
+
+                    @media screen and (max-width: 1350px) {
+                        width: 120px;
+                    }
+                }
+
+                .title-function {
+                    @media screen and (max-width: 1350px) {
+                        margin-top: 10px;
+                    }
+                }
+            }
+
+            ul.list-plans {
+                li.plan-item {
+                    list-style-type: none;
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    font-weight: 600;
+
+                    &:first-child {
+                        font-size: 15px;
+                    }
+                }
+
+                li.li-disc {
+                    list-style-type: disc;
+                }
+
+                &.b-bottom {
+                    li:not(:last-child) {
+                        border-bottom: 1px solid $border;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*==================== End Plans ====================*/
+
+/*==================== Start cw-rules ====================*/
+#cw-rules {
+    .btn-sync-cw {
+        padding-left: 690px;
+    }
+
+    .check-box-switch {
+        flex-direction: row;
+        display: flex;
+    }
+
+    .check-box-switch label {
+        margin: 0 10px 0 10px;
+    }
+}
+
+/*==================== End cw-rules ====================*/
+
+/*==================== Start FAQ ====================*/
+#faq {
+    .tabs {
+        flex-wrap: wrap;
+
+        .tabs-item {
+            flex: 1 0 450px;
+        }
+    }
+
+    .d-block {
+        display: block !important;
+    }
+
+    /*List categories*/
+    .mark {
+        background-color: #d7ffe7 !important
+    }
+
+    .mark .gsearch {
+        font-size: 20px
+    }
+
+
+    .unmark {
+        background-color: #e8e8e8 !important
+    }
+
+    .unmark .gsearch {
+        font-size: 10px
+    }
+
+    .si {
+        font-weight: bold;
+        color: #da770c;
+    }
+
+    .simple {
+        padding: 10px;
+        margin: 10px;
+        background-color: #b9d5ec
+    }
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+/*==================== End FAQ ====================*/
+
+/*==================== Start Aws Trusted Advisor Report ====================*/
+#aws-trusted-advisor-report {
+    .infos {
+        flex-wrap: wrap;
+
+        .item-info {
+            height: 100px;
+            flex: 1 0 250px;
+        }
+    }
+
+    .list-report {
+        .card {
+            border-left: none !important;
+            border-right: none !important;
+            background-color: #F6F6F6 !important;
+            border-radius: 0px !important;
+        }
+    }
+}
+
+/*==================== End Aws Trusted Advisor Report ====================*/
+
+/*==================== End Dashboard Quicksight ====================*/
+
+#dashboard_quicksight {
+    #tabDashboardQuicksight {
+        border: none !important;
+    }
+}
+
+/*==================== End Dashboard Quicksight ====================*/

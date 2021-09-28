@@ -1,0 +1,37 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "yarn run development",
+        "development": "mix",
+        "watch": "mix watch",
+        "watch-poll": "mix watch -- --watch-options-poll=1000",
+        "hot": "mix watch --hot",
+        "prod": "yarn run production",
+        "production": "mix --production"
+    },
+    "devDependencies": {
+        "@fortawesome/fontawesome-free": "^5.15.4",
+        "@inertiajs/inertia": "^0.10.1",
+        "@inertiajs/inertia-vue3": "^0.5.2",
+        "@inertiajs/progress": "^0.2.6",
+        "@popperjs/core": "^2.9.3",
+        "@vue/compiler-sfc": "^3.2.2",
+        "axios": "^0.21",
+        "bootstrap": "^5.1.0",
+        "eslint": "^7.32.0",
+        "eslint-plugin-vue": "^7.16.0",
+        "laravel-echo": "^1.11.1",
+        "laravel-mix": "^6.0.6",
+        "lodash": "^4.17.19",
+        "postcss": "^8.3.6",
+        "postcss-import": "^14.0.2",
+        "pusher-js": "^7.0.3",
+        "sass": "1.32.*",
+        "sass-loader": "^12.1.0",
+        "simplebar": "^5.3.5",
+        "uniqid": "^5.3.0",
+        "vue": "^3.2.2",
+        "vue-loader": "^16.5.0"
+    },
+    "dependencies": {}
+}

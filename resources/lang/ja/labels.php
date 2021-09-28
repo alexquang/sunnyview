@@ -1,0 +1,51 @@
+<?php
+return [
+    // common buttons text
+    'back' => '戻る',
+    'cancel' => 'キャンセル',
+    'confirm' => '確認',
+    'create' => '作成',
+    'delete' => '削除',
+    'modify' => '変更',
+    'save' => '保存', // can used for both create & mmodify
+    'signup' => '新規登録',
+    // common usages text
+    'account' => 'アカウント',
+    'action' => '操作',
+    'all' => 'すべて',
+    'company' => '会社',
+    'count' => '数',
+    'dashboard' => 'ダッシュボード',
+    'description' => '説明',
+    'email' => 'メールアドレス',
+    'group' => 'グループ',
+    'info' => '情報',
+    'ip' => 'IPアドレス',
+    'list' => '一覧',
+    'management' => '管理',
+    'manual' => '手動',
+    'name' => '名',
+    'password' => 'パスワード',
+    'permission' => '権限',
+    'project' => 'プロジェクト',
+    'rate' => '為替レート',
+    'region' => 'リージョン',
+    'role' => 'ロール',
+    'setting' => '設定',
+    'time' => '時間',
+    'user' => 'ユーザー',
+    'ym' => '年月',
+    // others
+    'nav' => [
+        'apps' => '管理・設定',
+        'auth' => '権限',
+        'aws' => 'AWS',
+        'ec2' => 'EC2',
+        'help' => 'ヘルプ',
+        'invoice' => '請求書',
+        'rds' => 'RDS',
+        'support' => 'サポート',
+        'system' => 'システム',
+    ],
+    'confirm_delete' => '削除を確認', // modal title
+];

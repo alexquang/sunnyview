@@ -1,0 +1,545 @@
+$ws: 20, 30, 40, 50, 60, 70, 80, 90, 100, 105, 110, 120, 130, 140, 150, 160, 170,
+    180, 190, 200, 210, 220, 250, 260, 270, 280, 300, 310, 320, 350, 360, 370,
+    380, 390, 400, 450, 500, 800;
+
+@each $w in $ws {
+    .width-#{$w} {
+        width: #{$w}px !important;
+    }
+}
+
+$mws: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170,
+    180, 190, 200, 210, 220, 230, 240, 250, 260, 270, 280, 290, 300, 310, 320,
+    330, 340, 350, 360, 370, 380, 390, 400, 410, 420, 430, 440, 450, 460, 470,
+    480, 490, 500;
+
+@each $w in $mws {
+    .minw-#{$w} {
+        min-width: #{$w}px !important;
+    }
+}
+
+$maxws: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160,
+    170, 180, 190, 200, 210, 220, 230, 240, 250, 260, 270, 280, 290, 300, 310,
+    320, 330, 340, 350, 360, 370, 380, 390, 400, 410, 420, 430, 440, 450, 460,
+    470, 480, 490, 500;
+
+@each $max in $maxws {
+    .maxw-#{$max} {
+        max-width: #{$max}px !important;
+    }
+}
+
+.w-f-100 {
+    width: 100% !important;
+}
+
+.m-w-f-100 {
+    max-width: 100% !important;
+}
+
+$hs: 30, 20, 36, 40, 48, 49, 50, 60, 70, 80, 90, 100, 110, 150, 200;
+
+@each $h in $hs {
+    .h-#{$h} {
+        height: #{$h}px !important;
+    }
+}
+
+.h-f-100 {
+    height: 100%;
+}
+
+#content {
+    .h-100 {
+        height: 100px !important;
+    }
+}
+
+$gaps: 0, 5, 10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100, 150, 200;
+
+@each $gap in $gaps {
+    .gap-#{$gap} {
+        gap: #{$gap}px;
+    }
+}
+
+$lhs: 12, 13, 14, 16, 17, 18, 20, 22, 24, 26, 28, 30, 40, 50, 60, 70, 80, 90,
+    100;
+
+@each $lh in $lhs {
+    .lh-#{$lh} {
+        line-height: #{$lh}px !important;
+    }
+}
+
+// Margin
+
+$mts: 1, 2, 3, 4, 5, 6, 8, 10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100, 150,
+    200;
+
+@each $mt in $mts {
+    .mts-#{$mt} {
+        margin-top: #{$mt}px !important;
+    }
+}
+
+$mbs: 0, 5, 10, 15, 20, 25, 26, 27, 28, 29, 30, 40, 50, 60, 70, 80, 90, 100, 150,
+    200;
+
+@each $mb in $mbs {
+    .mbs-#{$mb} {
+        margin-bottom: #{$mb}px !important;
+    }
+}
+
+.mb-30-reponsive {
+    margin-bottom: 30px !important;
+}
+
+$mls: 5, 10, 15, 20, 25, 30, 40, 45, 50, 60, 70, 80, 90, 100, 150, 200;
+
+@each $ml in $mls {
+    .mls-#{$ml} {
+        margin-left: #{$ml}px !important;
+    }
+}
+
+$mrs: 5, 10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100, 150, 200;
+
+@each $mr in $mrs {
+    .mrs-#{$mr} {
+        margin-right: #{$mr}px !important;
+    }
+}
+
+$mys: 5, 10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100, 150, 200;
+
+@each $my in $mys {
+    .mys-#{$my} {
+        margin-top: #{$my}px !important;
+        margin-bottom: #{$my}px !important;
+    }
+}
+
+.my-30-reponsive {
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+}
+
+$mxs: 5, 10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100, 150, 200;
+
+@each $mx in $mxs {
+    .mxs-#{$mx} {
+        margin-left: #{$mx}px !important;
+        margin-right: #{$mx}px !important;
+    }
+}
+
+$mas: 0, 5, 10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100, 150, 200;
+
+@each $ma in $mas {
+    .mas-#{$ma} {
+        margin: #{$ma}px !important;
+    }
+}
+
+// Padding
+
+$pts: 5, 10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100, 150, 200;
+
+@each $pt in $pts {
+    .pts-#{$pt} {
+        padding-top: #{$pt}px !important;
+    }
+}
+
+$pls: 5, 10, 15, 20, 25, 30, 35, 40, 50, 60, 70, 80, 90, 100, 150, 200;
+
+@each $pl in $pls {
+    .pls-#{$pl} {
+        padding-left: #{$pl}px !important;
+    }
+}
+
+$prs: 5, 10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100, 150, 200;
+
+@each $pr in $prs {
+    .prs-#{$pr} {
+        padding-right: #{$pr}px !important;
+    }
+}
+
+$pbs: 5, 8, 10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100, 150, 200;
+
+@each $pb in $pbs {
+    .pbs-#{$pb} {
+        padding-bottom: #{$pb}px !important;
+    }
+}
+
+$pys: 5, 8, 10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100, 150, 200;
+
+@each $py in $pys {
+    .pys-#{$py} {
+        padding-top: #{$py}px !important;
+        padding-bottom: #{$py}px !important;
+    }
+}
+
+$pxs: 0, 5, 10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100, 150, 200;
+
+@each $px in $pxs {
+    .pxs-#{$px} {
+        padding-left: #{$px}px !important;
+        padding-right: #{$px}px !important;
+    }
+}
+
+$pas: 0, 5, 10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100, 150, 200;
+
+@each $pa in $pas {
+    .pas-#{$pa} {
+        padding: #{$pa}px !important;
+    }
+}
+
+.py {
+    &-20-reponsive {
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+    }
+
+    &-30-reponsive {
+        padding-top: 30px !important;
+        padding-bottom: 30px !important;
+    }
+}
+
+.pa {
+    &-30-reponsive {
+        padding: 30px !important;
+    }
+
+    &-50-reponsive {
+        padding: 50px !important;
+    }
+}
+
+$font-vars: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
+    20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38,
+    39, 40, 41, 42, 43, 45, 46, 47, 48, 49, 50, 60, 70;
+
+@each $font in $font-vars {
+    .font-#{$font} {
+        font-size: #{$font}px !important;
+    }
+}
+
+.c-pointer {
+    cursor: pointer;
+}
+
+.d-flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.d-flex-reponsive {
+    display: flex;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.container-common {
+    border: thin solid $border;
+    background-color: #f6f6f6;
+    padding: 30px;
+    color: $black;
+    border-radius: 8px;
+
+    &.box-shadow {
+        box-shadow: 0px 0px 40px #00000066;
+    }
+}
+
+.wrapper {
+    h1 {
+        font-size: 24px;
+        font-weight: bold;
+        color: $white;
+    }
+
+    h2 {
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+
+.text-blue {
+    color: $blue !important;
+}
+
+.text-blue-light {
+    color: $blue-light !important;
+}
+
+.text-black {
+    color: $black !important;
+}
+
+.text-orange {
+    color: $orange !important;
+}
+
+.bg-orange {
+    background-color: $orange !important;
+}
+
+.text-teal {
+    color: $teal !important;
+}
+
+.text-green-light {
+    color: $green-light;
+}
+
+.bg-green-light {
+    background-color: $green-light;
+}
+
+.text-red,
+.text-error {
+    color: $error !important;
+}
+
+.text-gray {
+    color: $gray !important;
+}
+
+.text-green {
+    color: $green !important;
+}
+
+.bg-green {
+    background-color: $green;
+}
+
+.bg-badge-gray {
+    background-color: #dddddd;
+}
+
+.b-l-blue {
+    border-left: 10px solid $blue !important;
+}
+
+.b-l-orange {
+    border-left: 10px solid $orange !important;
+}
+
+.box-shadow-default {
+    box-shadow: 0px 0px 40px #00000066;
+}
+
+label.error {
+    color: #f00 !important;
+    font-weight: bold;
+}
+
+textarea.error,
+textarea.error:focus,
+input.error,
+input.error:focus,
+select.error,
+select.error:focus {
+    border: 1px solid #f00 !important;
+    outline: none;
+    box-shadow: none;
+}
+
+.link-active {
+    background: #0d5daa;
+}
+
+// span.select2-container {
+//     z-index: 10050;
+// }
+
+// .select2-selection__rendered {
+//     z-index: 10050;
+// }
+
+div.dividers {
+    height: 1px;
+    width: 100%;
+    background-color: $border;
+}
+
+.dnone {
+    display: none;
+}
+
+button.loading {
+    position: relative;
+    color: transparent !important;
+}
+
+button.loading:hover {
+    color: transparent !important;
+}
+
+button.loading > .spinner-border {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.spinner-border.loader-orange {
+    color: $orange;
+    width: 3rem;
+    height: 3rem;
+    border: 5px solid;
+    border-right-color: transparent;
+}
+
+/* Style scroll to top */
+#scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgb(242, 128, 8, 0.7);
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    z-index: 10000;
+    i {
+        color: #fff;
+        margin: 0;
+        position: relative;
+        left: 16px;
+        top: 13px;
+        font-size: 19px;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+    &:hover {
+        background: rgb(242, 128, 8, 0.9);
+        i {
+            color: #fff;
+            top: 5px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .py {
+        &-30-reponsive {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        &-20-reponsive {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    }
+
+    .pa {
+        &-30-reponsive {
+            padding: 20px;
+        }
+
+        &-50-reponsive {
+            padding: 20px;
+        }
+    }
+
+    .my {
+        &-30-reponsive {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .mt {
+        &-30-reponsive {
+            margin-top: 20px;
+        }
+    }
+
+    .mb {
+        &-30-reponsive {
+            margin-bottom: 20px;
+        }
+    }
+
+    .d-flex-reponsive {
+        display: block;
+    }
+
+    .container-common {
+        padding: 20px;
+    }
+}
+
+.list-info {
+    border: 1px solid $border;
+
+    .item-info {
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        // height: 40px;
+
+        &:nth-child(even) {
+            background: #fff;
+        }
+
+        &:nth-child(odd) {
+            // background: #FFF;
+        }
+
+        &:not(:last-child) {
+            border-bottom: 1px solid $border;
+        }
+
+        .item-info-left {
+            padding: 10px;
+            font-weight: 600;
+            border-right: 1px solid $border;
+        }
+
+        .item-info-right {
+            padding: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    body {
+        font-size: 12px;
+    }
+}
+.btn-outline {
+    .loading-default {
+        color: $blue !important;
+    }
+}
